@@ -1,12 +1,17 @@
 {
-  "name": "cache.js",
+  "name": "tronicache",
   "version": "1.0.0",
-  "description": "",
+  "description": "An opinonated memcache",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/*.test.js"
   },
-  "keywords": [],
+  "keywords": [
+    "memcache",
+    "cache",
+    "service",
+    "memory"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
