@@ -15,7 +15,7 @@ npm install --save tronicache
 Create your service
 
 ```javascript
-const { cached } = require('tronnicache');
+const { cached } = require('tronicache');
 
 const service = cached({
   users: {
@@ -32,7 +32,7 @@ const service = cached({
       }
     }
   },
-  messages: {
+  notifications: {
     // nothing under 'notifications' is cached
     noCache: true,
     fetch() {
