@@ -1,6 +1,6 @@
 {
   "name": "tronicache",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An opinonated memcache",
   "main": "index.js",
   "scripts": {

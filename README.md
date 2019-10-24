@@ -12,7 +12,35 @@ npm install --save tronicache
 
 # Usage
 
-Create your service
+## Create a cached service
+
+### Indefinite caching by default
+
+```javascript
+const { cached } = require('tronicache');
+
+const service = cached({
+  getUser(uid) {
+    // cached indefinitely
+  }
+})
+```
+
+### Configurable timeout
+
+```javascript
+const { cached } = require('tronicache');
+
+const service = cached({
+  timeout: 2 * 60 * 6000, // all methods at the root are cached for 2 minutes
+
+  getUser(uid) {
+    // cached for 2 minutes
+  }
+})
+```
+
+### Nested namespace support
 
 ```javascript
 const { cached } = require('tronicache');
