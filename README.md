@@ -34,13 +34,13 @@ const service = cached({
   },
   notifications: {
     // nothing under 'notifications' is cached
-    noCache: true,
+    cache: false,
     fetch() {
       // ...
     },
 
     archive: {
-      noCache: false, // override in the subnamespace
+      cache: true, // override in the subnamespace
       fetch() { }
     }
   }

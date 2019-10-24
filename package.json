@@ -1,6 +1,6 @@
 {
   "name": "tronicache",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An opinonated memcache",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,14 @@
     "memcache",
     "cache",
     "service",
-    "memory"
+    "memory",
+    "service",
+    "memoize"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrixr/tronicache.git"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {

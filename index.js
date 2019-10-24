@@ -42,7 +42,7 @@ function serialize(args) {
 function buildConfig(obj, config) {
   let opts = populate({}).from(config, id);
   if (has(obj, 'timeout')) { opts.timeout = obj.timeout }
-  if (has(obj, 'noCache')) { opts.noCache = obj.noCache }
+  if (has(obj, 'cache')) { opts.cache = obj.cache }
   return opts;
 }
 
@@ -52,7 +52,7 @@ function cached(obj, scope, parentConfig = {}, prefix = '') {
   const output  = {};
   const cache   = {};
   const config  = buildConfig(obj, parentConfig);
-  const noCache = config.noCache === true;
+  const noCache = config.cache === false;
   const timeout = config.timeout || -1;
 
   scope = scope || output;

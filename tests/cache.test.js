@@ -10,12 +10,12 @@ describe('Cache', () => {
       users: {
         getUserById: ref,
         notifications: {
-          noCache: true,
+          cache: false,
           getNotification: ref
         }
       },
       messages: {
-        noCache: true,
+        cache: false,
         getMessage: ref
       },
       posts: {
@@ -32,7 +32,7 @@ describe('Cache', () => {
     })
   });
 
-  it ('does not cache for noCache namespaces', () => {
+  it ('does not cache for cache:false namespaces', () => {
     const first   = this.subject.messages.getMessage();
     const second  = this.subject.messages.getMessage();
 
